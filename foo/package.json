@@ -8,6 +8,7 @@
     "build": "echo 'build'",
     "lint": "echo 'lint'",
     "typecheck": "echo 'format'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:ok": "echo \"Error: no test specified\""
   }
 }

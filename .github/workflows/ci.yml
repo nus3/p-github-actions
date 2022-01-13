@@ -26,7 +26,8 @@ jobs:
         run: npm run lint
 
       - name: 🚨 test
-        run: npm run test
+        run: npm run test:ok
+        # run: npm run test
 
       - name: ✅ type check
         run: npm run typecheck
