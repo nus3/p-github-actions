@@ -5,7 +5,7 @@ on:
       - 'foo/**'
 
 jobs:
-  not_matched:
+  foo_lint_test_typecheck:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "No foo required"'
+      - run: 'echo "Not required!"'
