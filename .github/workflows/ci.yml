@@ -1,15 +1,27 @@
 name: ci
 on:
   push:
-    paths:
-      - 'foo/**'
+    # paths:
+    #   - 'foo/**'
 
 defaults:
   run:
     working-directory: foo
 
 jobs:
+  foo_filter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            foo:
+              - 'foo/**'
+
   foo_lint_test_typecheck:
+    needs: foo_filter
+    if: ${{ needs.foo_filter.outputs.foo == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout
