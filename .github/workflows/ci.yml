@@ -11,6 +11,8 @@ defaults:
 jobs:
   foo_filter:
     runs-on: ubuntu-latest
+    outputs:
+      foo: ${{ steps.filter.outputs.foo }}
     steps:
       - uses: dorny/paths-filter@v2
         id: filter
