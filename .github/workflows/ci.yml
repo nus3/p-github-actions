@@ -9,7 +9,7 @@ defaults:
     working-directory: foo
 
 jobs:
-  mira_lint_test_typecheck:
+  foo_lint_test_typecheck:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
