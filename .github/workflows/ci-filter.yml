@@ -1,0 +1,11 @@
+name: ci
+on:
+  push:
+    paths-ignore:
+      - 'foo/**'
+
+jobs:
+  not_matched:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No foo required"'
