@@ -1,0 +1,11 @@
+name: ci-filter
+on:
+  pull_request:
+    paths-ignore:
+      - 'foo/**'
+
+jobs:
+  foo_lint_test_typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "Not required!"'
