@@ -1,4 +1,4 @@
-name: ci
+name: ci-filter
 on:
   pull_request:
     paths-ignore:
